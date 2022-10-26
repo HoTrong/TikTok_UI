@@ -15,6 +15,6 @@ const publicRoutes = [
     { path: '/upload', component: Upload, layout: headerOnly },
 ];
 
-const privateRoutes = []
+const privateRoutes = [];
 
-export { publicRoutes, privateRoutes }
+export { publicRoutes, privateRoutes };
