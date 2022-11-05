@@ -1,18 +1,19 @@
-import { headerOnly } from '~/components/Layout';
+import { headerOnly } from '~/Layout';
 
-import Home from '~/pages/Home';
+import config from '~/config';
+
 import Following from '~/pages/Following';
 import Profile from '~/pages/Profile';
-import Search from '~/pages/Search';
 import Upload from '~/pages/Upload';
-
+import Search from '~/pages/Search';
+import Home from '~/pages/Home';
 //Public routes
 const publicRoutes = [
-    { path: '/', component: Home },
-    { path: '/following', component: Following },
-    { path: '/@:nickname', component: Profile },
-    { path: '/search', component: Search, layout: null },
-    { path: '/upload', component: Upload, layout: headerOnly },
+    { path: config.routes.home, component: Home },
+    { path: config.routes.following, component: Following },
+    { path: config.routes.profile, component: Profile },
+    { path: config.routes.upload, component: Upload, layout: headerOnly },
+    { path: config.routes.search, component: Search, layout: null },
 ];
 
 const privateRoutes = [];

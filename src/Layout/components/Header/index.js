@@ -8,14 +8,16 @@ import {
     faUser,
     faCoins,
     faGear,
-    faArrowRightFromBracket
+    faArrowRightFromBracket,
 } from '@fortawesome/free-solid-svg-icons';
+import config from '~/config';
 import classNames from 'classnames/bind';
 import Tippy from '@tippyjs/react';
 
 import Menu from '~/components/Popper/Menu';
 import styles from './Header.module.scss';
-import Button from '~/components/Button'
+import Button from '~/components/Button';
+import { Link } from 'react-router-dom';
 import Image from '~/components/Image';
 import images from '~/assets/images';
 import 'tippy.js/dist/tippy.css';
@@ -25,199 +27,198 @@ const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
     {
-        icon: <FontAwesomeIcon icon={faEarthAsia}/>,
+        icon: <FontAwesomeIcon icon={faEarthAsia} />,
         title: 'English',
         children: {
-            tilte: 'Language',
+            title: 'Language',
             data: [
                 {
                     type: 'language',
                     code: 'arabic',
-                    title: 'العربية'
+                    title: 'العربية',
                 },
                 {
                     type: 'language',
                     code: 'india',
-                    title: 'বাঙ্গালি (ভারত)'
+                    title: 'বাঙ্গালি (ভারত)',
                 },
                 {
                     type: 'language',
                     code: 'philippines',
-                    title: 'Cebuano (Pilipinas)'
+                    title: 'Cebuano (Pilipinas)',
                 },
                 {
                     type: 'language',
                     code: 'czech',
-                    title: 'Čeština (Česká republika)'
+                    title: 'Čeština (Česká republika)',
                 },
                 {
                     type: 'language',
                     code: 'germany',
-                    title: 'Deutsch'
+                    title: 'Deutsch',
                 },
                 {
                     type: 'language',
                     code: 'greek',
-                    title: 'Ελληνικά (Ελλάδα)'
+                    title: 'Ελληνικά (Ελλάδα)',
                 },
                 {
                     type: 'language',
                     code: 'england',
-                    title: 'English'
+                    title: 'English',
                 },
                 {
                     type: 'language',
                     code: 'spanish',
-                    title: 'Español'
+                    title: 'Español',
                 },
                 {
                     type: 'language',
                     code: 'finland',
-                    title: 'Suomi (Suomi)'
+                    title: 'Suomi (Suomi)',
                 },
                 {
                     type: 'language',
                     code: 'philippines',
-                    title: 'Filipino (Pilipinas)'
+                    title: 'Filipino (Pilipinas)',
                 },
                 {
                     type: 'language',
                     code: 'french',
-                    title: 'Français'
+                    title: 'Français',
                 },
                 {
                     type: 'language',
                     code: 'israel',
-                    title: 'עברית (ישראל)'
+                    title: 'עברית (ישראל)',
                 },
                 {
                     type: 'language',
                     code: 'hindi',
-                    title: 'हिंदी'
+                    title: 'हिंदी',
                 },
                 {
                     type: 'language',
                     code: 'hungary',
-                    title: 'Magyar (Magyarország)'
+                    title: 'Magyar (Magyarország)',
                 },
                 {
                     type: 'language',
                     code: 'indonesia',
-                    title: 'Bahasa Indonesia (Indonesia)'
+                    title: 'Bahasa Indonesia (Indonesia)',
                 },
                 {
                     type: 'language',
                     code: 'italia',
-                    titl: 'Italiano (Italia)'
+                    titl: 'Italiano (Italia)',
                 },
                 {
                     type: 'language',
                     code: 'japan',
-                    title: '日本語（日本）'
+                    title: '日本語（日本）',
                 },
                 {
                     type: 'language',
                     code: 'indonesia',
-                    title: 'Basa Jawa (Indonesia)'
+                    title: 'Basa Jawa (Indonesia)',
                 },
                 {
                     type: 'language',
                     code: 'cambodia',
-                    title: 'ខ្មែរ (កម្ពុជា)'
+                    title: 'ខ្មែរ (កម្ពុជា)',
                 },
                 {
                     type: 'language',
                     code: 'korea',
-                    title: '한국어 (대한민국)'
+                    title: '한국어 (대한민국)',
                 },
                 {
                     type: 'language',
                     code: 'malaysia',
-                    title: 'Bahasa Melayu (Malaysia)'
+                    title: 'Bahasa Melayu (Malaysia)',
                 },
                 {
                     type: 'language',
                     code: 'myanmar',
-                    title: 'မြန်မာ (မြန်မာ)'
+                    title: 'မြန်မာ (မြန်မာ)',
                 },
                 {
                     type: 'language',
                     code: 'dutch',
-                    title: 'Nederlands (Nederland)'
+                    title: 'Nederlands (Nederland)',
                 },
                 {
                     type: 'language',
                     code: 'poland',
-                    title: 'Polski (Polska)'
+                    title: 'Polski (Polska)',
                 },
                 {
                     type: 'language',
                     code: 'brazil',
-                    title: 'Português (Brasil)'
+                    title: 'Português (Brasil)',
                 },
                 {
                     type: 'language',
                     code: 'romania',
-                    title: 'Română (Romania)'
+                    title: 'Română (Romania)',
                 },
                 {
                     type: 'language',
                     code: 'rusia',
-                    title: 'Русский (Россия)'
+                    title: 'Русский (Россия)',
                 },
                 {
                     type: 'language',
                     code: 'sweden',
-                    title: 'Svenska (Sverige)'
+                    title: 'Svenska (Sverige)',
                 },
                 {
                     type: 'language',
                     code: 'thailand',
-                    title: 'ไทย (ไทย)'
+                    title: 'ไทย (ไทย)',
                 },
                 {
                     type: 'language',
                     code: 'turkey',
-                    title: 'Türkçe (Türkiye)'
+                    title: 'Türkçe (Türkiye)',
                 },
                 {
                     type: 'language',
                     code: 'ukraine',
-                    title: 'Українська (Україна)'
+                    title: 'Українська (Україна)',
                 },
                 {
                     type: 'language',
                     code: 'urdu',
-                    title: 'اردو'
+                    title: 'اردو',
                 },
                 {
                     type: 'language',
                     code: 'vietnam',
-                    title: 'Tiếng Việt (Việt Nam)'
+                    title: 'Tiếng Việt (Việt Nam)',
                 },
                 {
                     type: 'language',
                     code: 'china',
-                    title: '简体中文'
+                    title: '简体中文',
                 },
                 {
                     type: 'language',
                     code: 'china',
-                    title: '繁體中文'
+                    title: '繁體中文',
                 },
-            ]
-        }
+            ],
+        },
     },
     {
-        icon: <FontAwesomeIcon icon={faCircleQuestion}/>,
+        icon: <FontAwesomeIcon icon={faCircleQuestion} />,
         title: 'Feedback and help',
         to: '/feedback',
     },
     {
-        icon: <FontAwesomeIcon icon={faKeyboard}/>,
+        icon: <FontAwesomeIcon icon={faKeyboard} />,
         title: 'Keyboard shortcuts',
-    }
-
+    },
 ];
 
 function Header() {
@@ -226,47 +227,47 @@ function Header() {
     // Handle logic
     const handleMenuChange = (menuItem) => {
         switch (menuItem.type) {
-            case 'language': 
+            case 'language':
                 // Handle language change
                 break;
             default:
                 break;
         }
-    }
+    };
 
     const userMenu = [
         {
-            icon: <FontAwesomeIcon icon={faUser}/>,
+            icon: <FontAwesomeIcon icon={faUser} />,
             title: 'View profile',
             to: '/@hoaaa',
         },
         {
-            icon: <FontAwesomeIcon icon={faCoins}/>,
+            icon: <FontAwesomeIcon icon={faCoins} />,
             title: 'Get coins',
             to: '/coin',
         },
         {
-            icon: <FontAwesomeIcon icon={faGear}/>,
+            icon: <FontAwesomeIcon icon={faGear} />,
             title: 'Settings',
             to: '/settings',
         },
         ...MENU_ITEMS,
         {
-            icon: <FontAwesomeIcon icon={faArrowRightFromBracket}/>,
+            icon: <FontAwesomeIcon icon={faArrowRightFromBracket} />,
             title: 'Logout',
             to: '/logout',
-            seperate: true
-        }
-    ]
+            seperate: true,
+        },
+    ];
 
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <div className={cx('logo')}>
-                    <img src={images.logo} alt="TikTok"/>
-                </div>
+                <Link to={config.routes.home} className={cx('logo-link')}>
+                    <img src={images.logo} alt="Tiktok" />
+                </Link>
 
-                <Search/>
+                <Search />
 
                 <div className={cx('actions')}>
                     {currentUser ? (
@@ -296,10 +297,7 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <Image 
-                                className={cx('user-avatar')}
-                                src=''
-                                alt="Nguyen Van A"/>
+                            <Image className={cx('user-avatar')} src="" alt="Nguyen Van A" />
                         ) : (
                             <button className={cx('more-btn')}>
                                 <FontAwesomeIcon icon={faEllipsisVertical} />
