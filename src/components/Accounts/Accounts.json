@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "name": "Suggested Accounts",
+      "info": [
+        {
+          "key": 1,
+          "nickname": "Alphamon",
+          "name": "Alphamon",
+          "src": "https://i.ibb.co/4VmjQrJ/Alphamon.jpg"
+        },
+        {
+          "key": 2,
+          "nickname": "WarGreymon",
+          "name": "WarGreymon",
+          "src": "https://i.ibb.co/0ZBRLyh/War-Greymon.jpg"
+        },
+        {
+          "key": 3,
+          "nickname": "Dukemon",
+          "name": "Gallantmoon",
+          "src": "https://i.ibb.co/yQybSbs/Gallantmon.webp"
+        },
+        {
+          "key": 4,
+          "nickname": "Imperialdramon",
+          "name": "Imperialdramon",
+          "src": "https://i.ibb.co/8xhNjQ9/Imperialdramon.jpg"
+        },
+        {
+          "key": 5,
+          "nickname": "Imperialdramon-dragonmode",
+          "name": "Imperialdramon",
+          "src": "https://i.ibb.co/H41sbkF/Imperialdramon-dragonmode.webp"
+        },
+        {
+          "key": 6,
+          "nickname": "Omegamon X Antibody",
+          "name": "Omegamon",
+          "src": "https://i.ibb.co/tq2cNwP/Omegamon-X-Antibody.webp"
+        },
+        {
+          "key": 7,
+          "nickname": "Omegamon",
+          "name": "Omegamon",
+          "src": "https://i.ibb.co/nf8G5BC/Omegamon.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Following Accounts",
+      "info": [
+        {
+          "key": 1,
+          "nickname": "Destiny Gundam",
+          "name": "ZGMF-X42S Destiny Gundam",
+          "src": "https://i.ibb.co/myBFdGw/Destiny.jpg"
+        },
+        {
+          "key": 2,
+          "nickname": "Axia Gundam",
+          "name": "GN1 Axia Gundam",
+          "src": "https://i.ibb.co/Bs6BG9S/Exia.jpg"
+        },
+        {
+          "key": 3,
+          "nickname": "Helios Gundam",
+          "name": "MSB-GH03 Helios Gundam",
+          "src": "https://i.ibb.co/wQsNsD9/Helios.jpg"
+        },
+        {
+          "key": 4,
+          "nickname": "Reversible Gundam",
+          "name": "HG-Reversible Gumdam",
+          "src": "https://i.ibb.co/FBqkJJs/HG-Reversible.jpg"
+        },
+        {
+          "key": 5,
+          "nickname": "Mechanics Calamity Gundam",
+          "name": "Full Mechanics Calamity Gundam",
+          "src": "https://i.ibb.co/Ph2kqk7/Mechanics-Calamity.png"
+        },
+        {
+          "key": 6,
+          "nickname": "Unicorn Gundam",
+          "name": "RX-0-Unicorn Gundam",
+          "src": "https://i.ibb.co/SJ0QQ0c/RX-0-Unicorn.jpg"
+        },
+        {
+          "key": 7,
+          "nickname": "Wing Gundam",
+          "name": "XXXG-01W Wing Gundam",
+          "src": "https://i.ibb.co/0j0t7h9/Wing.png"
+        },
+        {
+          "key": 8,
+          "nickname": "Freedom Gundam",
+          "name": "ZGMF-X10-A-Freedom Gundam",
+          "src": "https://i.ibb.co/smSsrVJ/ZGMF-X10-A-Freedom.jpg"
+        }
+      ]
+    }
+  ]
+}

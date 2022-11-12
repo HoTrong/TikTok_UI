@@ -1,0 +1,104 @@
+.post {
+    padding: 20px 0;
+    display: flex;
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.content {
+    margin-left: 12px;
+}
+
+.main-content {
+    width: 624px;
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    margin-right: 114px;
+    display: block;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 25px;
+    display: inline-block;
+    margin-right: 4px;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+.more-info {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 2.8rem;
+    display: inline-block;
+}
+
+.comment {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.6rem;
+    max-height: 3.2rem;
+    white-space: normal;
+    font-weight: 400;
+    max-width: 500px;
+}
+
+.follow-btn {
+    padding: 0 10px;
+    line-height: 26px;
+    min-width: 88px;
+    margin-bottom: 18px;
+}
+
+.reactions {
+    padding-top: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.reaction-icon {
+    margin-left: 20px;
+}
+
+.icon-layout {
+    text-align: center;
+}
+
+.background {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(22, 24, 35, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 6px;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.amount {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    color: rgba(22, 24, 35, 0.75);
+}
